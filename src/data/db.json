@@ -1,0 +1,17 @@
+{
+    "blogs": 
+    [
+        {
+            "id": 1,
+            "author": "Mario", 
+            "title": "How to jump", 
+            "content": "Lalala bla bla"
+        }, 
+        {
+            "id": 2,
+            "author": "Luigi", 
+            "title": "How to survive", 
+            "content": "You need to jump. Ask Mario for advice."
+        }
+    ]   
+}
