@@ -1,12 +1,81 @@
-div {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: "Quicksand";
+}
+
+#blogs div {
   border-color: black;
   border-width: 5px;
   text-align: center;
 }
 
 #blogs {
-  background-color: pink;
   margin-left: auto;
   margin-right: auto;
   width: 1000px;
+}
+
+.blog {
+  margin-bottom: 20px;
+  background-color: pink;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.blog h1 {
+  margin: 5px;
+}
+
+.blog h3 {
+  margin: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0  auto;
+}
+
+#navbar a:hover {
+  color: red;
+}
+
+#navbar h1 {
+  color: red;
+  width: 40%;
+  text-align: right;
+  margin-right: 20px;
+}
+
+#navbarDiv {
+  border-bottom: 1px solid black;
+}
+
+.links {
+  text-align: left;
+  width: 60%;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+
+.blog p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.individualBlog {
+  margin-bottom: 20px;
+  background-color: pink;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 0;
 }
