@@ -4,7 +4,19 @@
   font-family: "Quicksand";
 }
 
-#blogs div {
+.content div {
+  border-color: black;
+  border-width: 5px;
+  text-align: center;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+/* #blogs div {
   border-color: black;
   border-width: 5px;
   text-align: center;
@@ -14,7 +26,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 1000px;
-}
+} */
 
 .blog {
   margin-bottom: 20px;

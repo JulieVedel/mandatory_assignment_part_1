@@ -10,7 +10,7 @@ export default function Blog() {
     const blog = getBlogById(id, blogList)
     
     return (
-        <div id="blogs">
+        <div className="content">
             <div className="individualBlog" >
                 <h1>{ blog.title }</h1>
                 <h3>{ blog.author }</h3>

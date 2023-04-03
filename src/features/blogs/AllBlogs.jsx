@@ -20,7 +20,7 @@ export default function Blog() {
     )
 
     return (
-      <div id={"blogs"}>
+      <div className='content'>
         <h1>All blogs</h1>
         { blogPosts() }
       </div>
