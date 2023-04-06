@@ -1,9 +1,4 @@
-import { useState } from "react";
-import data from '../../data/db.json'
-
 export default function Create() {
-    const [blogData, setBlogData] = useState({author: "", title: "", content: ""})
-
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -13,23 +8,17 @@ export default function Create() {
 
         console.log(JSON.stringify(Object.fromEntries(formData.entries())));
 
-        const newBlogData = Object.fromEntries(formData.entries())
+        const newBlogData = JSON.stringify(Object.fromEntries(formData.entries()))
 
-        console.log(newBlogData);
-        console.log(data.blogs);
-
-        //data.blogs.push(JSON.stringify(Object.fromEntries(formData.entries())))
-
-        const test = {
-            id: 5,
-            author: "Julie", 
-            title: "Hejsa", 
-            content: "Dette er en test"
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: newBlogData
         }
 
-        const dataArray = data.blogs
-        console.log(dataArray);
-
+        fetch('http://localhost:8000/blogs', requestOptions)
+        .then(res => res.json())
+        .then(data => console.log(data))
 
     }
 

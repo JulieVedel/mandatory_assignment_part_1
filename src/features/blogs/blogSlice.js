@@ -1,29 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit'
-import data from '../../data/db.json'
 
 const initialState = {
-  blogData: (
-    data.blogs
-  )
+  blogData: []
 }
+
 
 export const blogSlice = createSlice({
     name: 'blog', 
     initialState,
     reducers: {
       // test: (state, actions) => {
-      //   const currentBlogID = actions.payload
-        
-        
-      // },
-      // showAll: (state) => {
-      //   state = initialState
-      //   console.log("showAll aktiveret")
-      // }
+      //   console.log("test")
+      //   },
+      setBlogData: (state, actions) => {
+        state.blogData = actions.payload
+      }
     },
   })
 
   
 
 export default blogSlice.reducer
-export const { test, showAll } = blogSlice.actions
+export const { test, setBlogData } = blogSlice.actions

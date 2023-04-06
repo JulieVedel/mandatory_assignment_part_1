@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { test, showAll } from './blogSlice'
+import { test, setBlogData } from './blogSlice'
 
 export default function Blog() {
     const navigate = useNavigate()
     const blogList = useSelector((state) => state.blog.blogData)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+      fetch('http://localhost:8000/blogs')
+      .then(res => res.json())
+      .then(blogs => {
+        dispatch(setBlogData(blogs))
+      })
+    }, [])
   
     const blogPosts = () => (
       blogList.map((blog) => (
@@ -26,3 +34,5 @@ export default function Blog() {
       </div>
     )
   }
+
+  
