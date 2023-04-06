@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import data from 'C:\\Users\\Julze\\OneDrive\\Dokumenter\\React\\mandatory_assignment_part_1\\my-app\\src\\data\\db.json'
+import data from '../../data/db.json'
 
 const initialState = {
   blogData: (

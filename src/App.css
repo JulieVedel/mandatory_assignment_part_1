@@ -91,3 +91,17 @@
   padding: 10px;
   padding-top: 0;
 }
+
+#joke {
+  text-align: left;
+}
+
+input[type=text]{
+  width: 250px;
+}
+
+textarea {
+  resize: none;
+  width: 800px;
+  height: 200px;
+}
