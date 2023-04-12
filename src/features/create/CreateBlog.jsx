@@ -1,8 +1,9 @@
 import Dialog from "../dialog/Dialog";
-import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { openDialog } from "./createBlogSlice";
 
 export default function Create() {
-    const dialogFlag = useSelector((state) => state.createBlog.showDialog)
+    const dispatch = useDispatch()
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -23,13 +24,17 @@ export default function Create() {
         fetch('http://localhost:8000/blogs', requestOptions)
         .then(res => res.json())
         .then(data => console.log(data))
+        
+        dispatch(openDialog())
 
+        document.getElementById("blogForm").reset()
     }
 
+    
     return (
         <div className="content">
             <h1>Create a new blog!</h1>
-            <form action="" method="post" onSubmit={handleSubmit}>
+            <form action="" method="post" id="blogForm" onSubmit={handleSubmit}>
                 <label htmlFor="author">Author</label><br />
                 <input type="text" id="author" name="author"/><br /><br />
                 <label htmlFor="title">Title</label><br />
@@ -38,11 +43,9 @@ export default function Create() {
                 <textarea name="content" id="content"></textarea><br /><br />
                 <input type="submit" value={"Submit"}/>
             </form>
-            if (dialogFlag == true) {
-                <Dialog></Dialog>
-            }
-            
+            <Dialog></Dialog>
         </div>
         
+
     )
 }

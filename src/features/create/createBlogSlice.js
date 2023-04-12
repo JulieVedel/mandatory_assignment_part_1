@@ -1,18 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    showDialog: false
+    isVisible: false,
 }
 
 export const createBlogSlice = createSlice({
     name: 'createBlog', 
     initialState,
     reducers: {
-      openDialog: (state, actions) => {
-        state.showDialog = true
+      openDialog: (state) => {
+        state.isVisible = true
       },
-      emptyForm: (state, actions) => {
-        state.showDialog = false
+      closeDialog: (state) => {
+        state.isVisible = false
+      },
+      emptyForm: (state) => {
         //slet indholdet af felterne
       }
     },
@@ -21,5 +23,5 @@ export const createBlogSlice = createSlice({
   
 
 export default createBlogSlice.reducer
-export const { openDialog, emptyForm } = createBlogSlice.actions
+export const { openDialog, closeDialog, emptyForm } = createBlogSlice.actions
 
