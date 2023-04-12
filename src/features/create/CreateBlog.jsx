@@ -1,4 +1,8 @@
+import Dialog from "../dialog/Dialog";
+import { useSelector } from 'react-redux'
+
 export default function Create() {
+    const dialogFlag = useSelector((state) => state.createBlog.showDialog)
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -34,6 +38,11 @@ export default function Create() {
                 <textarea name="content" id="content"></textarea><br /><br />
                 <input type="submit" value={"Submit"}/>
             </form>
+            if (dialogFlag == true) {
+                <Dialog></Dialog>
+            }
+            
         </div>
+        
     )
 }

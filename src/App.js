@@ -1,7 +1,7 @@
 import React from 'react';
 import AllBlogs from './features/blogs/AllBlogs';
 import Navbar from './features/navbar/Navbar'
-import Create from './features/create/Create';
+import Create from './features/create/CreateBlog';
 import About from './features/about/About';
 import Blog from './features/blogs/Blog';
 import { Routes, Route } from 'react-router-dom'
