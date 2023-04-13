@@ -17,7 +17,7 @@ To run the application, start out by running the script "npm start" in the termi
 This will open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-### `json-server --watch \src\data\db.json --port 8000`
+### `json-server --watch src/data/db.json --port 8000`
 
 This script will make a connection to the json-server on port 8000. 
 
