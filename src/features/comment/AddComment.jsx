@@ -1,12 +1,15 @@
 
 import { useParams } from "react-router-dom";
+import { useDispatch } from 'react-redux'
+import { updateComments } from "../blogs/blogSlice";
 
-export default function AddComment(props) {
+export default function AddComment() {
     const {id} = useParams()
-
+    const dispatch = useDispatch()
+    
     function handleSubmit(event) {
         event.preventDefault()
-      
+        
         const newComment = event.target.newComment.value
 
         fetch('http://localhost:8000/blogs')
@@ -25,12 +28,15 @@ export default function AddComment(props) {
                 headers: {
                     'Content-Type': 'application/json'
                 }
+                }).then(res => res.json())
+                .then(data => {
+                    console.log("data", data);
+                    dispatch(updateComments(blogToUpdate))
             });
         });
 
         document.getElementById("commentForm").reset()
-
-               
+        
     }
 
 

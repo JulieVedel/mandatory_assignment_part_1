@@ -6,7 +6,6 @@
       "title": "How to jump",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus magna vel lorem tincidunt congue. Morbi rutrum porttitor ex sed placerat. Sed aliquam non purus ac porttitor. Maecenas at arcu purus. Integer placerat consequat lorem, id posuere lacus molestie et. Etiam eget ante a tortor ornare cursus. Vivamus efficitur nisi quam, non faucibus ipsum tristique sit amet. Quisque lacinia dapibus velit, sit amet sagittis velit lacinia ac. Nulla lorem magna, dictum id libero sed, hendrerit efficitur mi. Donec condimentum sodales nunc, ut lacinia metus gravida non. Sed fermentum arcu erat, in euismod ipsum viverra non. Integer velit dui, laoreet euismod orci nec, euismod euismod diam. Mauris eu lacinia augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam suscipit felis sed ex elementum, nec hendrerit ex egestas. Vestibulum et quam in ante convallis vestibulum eget eu turpis.",
       "comments": [
-        "Hej",
         "Hello",
         "Yay"
       ]
@@ -15,12 +14,16 @@
       "id": 2,
       "author": "Luigi",
       "title": "How to survive",
-      "content": "Integer convallis magna at eros tincidunt sagittis. Phasellus consectetur suscipit sem. Nulla pharetra maximus semper. Sed pellentesque, nibh ut suscipit scelerisque, mi ligula pharetra enim, sit amet vulputate sapien dui in elit. Ut vitae ex risus. Donec nulla turpis, accumsan vel ligula at, imperdiet venenatis diam. Aenean vulputate nibh ut nibh vulputate, interdum condimentum massa accumsan. Sed lorem elit, convallis nec sapien ut, dignissim gravida est. Aenean gravida pulvinar massa, rhoncus fringilla lorem imperdiet porttitor."
+      "content": "Integer convallis magna at eros tincidunt sagittis. Phasellus consectetur suscipit sem. Nulla pharetra maximus semper. Sed pellentesque, nibh ut suscipit scelerisque, mi ligula pharetra enim, sit amet vulputate sapien dui in elit. Ut vitae ex risus. Donec nulla turpis, accumsan vel ligula at, imperdiet venenatis diam. Aenean vulputate nibh ut nibh vulputate, interdum condimentum massa accumsan. Sed lorem elit, convallis nec sapien ut, dignissim gravida est. Aenean gravida pulvinar massa, rhoncus fringilla lorem imperdiet porttitor.",
+      "comments": []
     },
     {
       "author": "Julie",
       "title": "Velkommen",
       "content": "Velkommen til bloggen",
+      "comments": [
+        "Dette er en fin blog\n"
+      ],
       "id": 3
     }
   ]

@@ -10,10 +10,11 @@ export default function Create() {
 
         const form = event.target;
         const formData = new FormData(form);
+        const blogObject = Object.fromEntries(formData.entries())
 
-        console.log(JSON.stringify(Object.fromEntries(formData.entries())));
+        blogObject.comments = []
 
-        const newBlogData = JSON.stringify(Object.fromEntries(formData.entries()))
+        const newBlogData = JSON.stringify(blogObject)
 
         const requestOptions = {
             method: 'POST',

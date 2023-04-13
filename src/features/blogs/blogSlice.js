@@ -14,6 +14,10 @@ export const blogSlice = createSlice({
       //   },
       setBlogData: (state, actions) => {
         state.blogData = actions.payload
+      },
+      updateComments: (state, actions) => {
+        const blogIndex = state.blogData.findIndex(blog => blog.id === actions.payload.id)
+        state.blogData[blogIndex] = actions.payload
       }
     },
   })
@@ -21,4 +25,4 @@ export const blogSlice = createSlice({
   
 
 export default blogSlice.reducer
-export const { test, setBlogData } = blogSlice.actions
+export const { test, setBlogData, updateComments } = blogSlice.actions
