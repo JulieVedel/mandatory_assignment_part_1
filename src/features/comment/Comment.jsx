@@ -1,9 +1,11 @@
+import AddComment from "./AddComment";
+
 export default function Comment(props) {
-    console.log(props.comments);
 
     if (props.comments == undefined) {
         return (
             <div>
+                <AddComment></AddComment>
                 <h3 className="commentTitle">There is no comments yet</h3>  
             </div>
         )
@@ -21,6 +23,7 @@ export default function Comment(props) {
 
     return (
         <div>
+            <AddComment commentList={props.comments}></AddComment>
             <h3 className="commentTitle">Comments:</h3>
             <div id="outline">
                 { commentList() }
